@@ -53,7 +53,8 @@ The return from the call is a document of type "application/json" and would look
 
 `id` would match the one I provide in the API URL.
 
-`participants` is an object containing participant objects, keyed by a unique ID for each speaker.
+`participants` is an object containing an object for each participant in the talk.
+Each one is keyed by a unique ID for that participant.
 There may be only one if it's a transcript of someone's speech to an audience for example.
 The `role` field of the participant object would be used to indicate that person's role in the conversation.
 This is where we would put "SE" or "IL" for an SE conversation.
