@@ -60,7 +60,7 @@ The `role` field of the participant object would be used to indicate that person
 This is where we would put "SE" or "IL" for an SE conversation.
 
 `start` is a Unix timestamp for the date and time when the talk started. 
-If that is not known, then it should be 0.
+If not known, it should be 0.
 
 `end` is a Unix timestamp for the date and time that the talk ended.
 
