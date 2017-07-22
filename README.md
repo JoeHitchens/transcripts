@@ -74,7 +74,7 @@ If `start` is 0, then `end` should simply be the length, in seconds, of the talk
 the `time` field of the utterance object is the # of seconds after `start` that the
 utterance begins.
 `speaker` references the participant (from the participants object) who made the utterance.
-`text` is the text of the actual utterance.
+`text` is the actual text of the utterance.
 Special transcript codes/escape-sequences should just be embedded into the `text` field.
 
 
