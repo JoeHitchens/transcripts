@@ -66,9 +66,9 @@ If not known, it should be 0.
 The length of the talk (in seconds) is `end - start`.
 If `start` is 0, then `end` should simply be the length, in seconds, of the talk.
 
-`video` is a URL for video recording of the talk, or null if not available.
+`video` is a URL for video recording of the talk, or `null` if not available.
 
-`audio` is a URL for audio recording of the talk, or null if not available.
+`audio` is a URL for audio recording of the talk, or `null` if not available.
 
 `utterances` is a variable length array of objects, one per utterance.
 the `time` field of the utterance object is the # of seconds after `start` that the
