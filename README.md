@@ -63,9 +63,8 @@ This is where we would put "SE" or "IL" for an SE conversation.
 If not known, it should be 0.
 
 `end` is a Unix timestamp for the date and time that the talk ended.
-
-The length of the talk (in seconds) can is `end - start`.
-If `start` is 0, then `end` should be the length, in seconds, of the talk.
+The length of the talk (in seconds) is `end - start`.
+If `start` is 0, then `end` should simply be the length, in seconds, of the talk.
 
 `video` is a URL for video recording of the talk, or null if not available.
 
