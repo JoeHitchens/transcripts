@@ -32,20 +32,18 @@ The return from the call is a document of type "application/json" and would look
 				role: "Speaker"
 			}
 		},
-		start: 1500759525, 	/* unix timestamp for Sat Jul 22 2017 14:38:45 GMT-0700 (PDT) */
-							/* If date of talk is unknown, start should be 0 */
-		end: 1500761621,	/* unix timestamp for Sat Jul 22 2017 15:13:41 GMT-0700 (PDT) */
-							/* length in seconds can be computed by subtracting start from end */
+		start: 1500759525,
+		end: 1500761621,
 		video: "https://www.youtube.com/watch?v=IE9rmfIPSos",
 		audio: null,
 		utterances: [
 			{
-				time: 1,	/* A count of seconds relative to 'start' */
+				time: 1,
 				speaker: "sg",
 				text: "So in April 2017, that would just recently passed, William Shatner, who's better known as Captain Kirk from the original Star Trek series, tweeted in support of the autism awareness month. So knowingly, or possibly unknowingly, William Shatner was unaware of the controversy of Autism Speaks. So many in the autism community say that Autism Speaks is anti-autism. Others point to promotion of past deeds they've had were.. were anti-vacs ideals."
 			},
 			{
-				time: 46,	/* A count of seconds relative to 'start' */
+				time: 46,
 				speaker: "sg",
 				text: "And this was politely pointed out to William Shatner and this all happened on Twitter. So you know what happened next, right. Shatner doubled down and was attacked, and returned, and it got real ugly real quick. So David Gorski, who is a member of the skeptic community, he writes for science-based medicine, he is an oncologist and he writes under the name or Orak. But he gets a lot of flack for writing about vaccine awareness, and lots of stuff he does, but it's all usually medicine related."
 			},
