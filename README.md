@@ -51,30 +51,30 @@ The return from the call is a document of type "application/json" and would look
 		]
 	}
 
-The 'id' field would match the one I provide in the API URL.
+The `id` field would match the one I provide in the API URL.
 
-The 'participant's field is an object containing participant objects, keyed by a unique ID for each speaker.
+The `participants` field is an object containing participant objects, keyed by a unique ID for each speaker.
 There may be only one if it's a transcript of someone's speech to an audience for example.
-The 'role' field of the participant object would be used to indicate that person's role in the conversation.
+The `role` field of the participant object would be used to indicate that person's role in the conversation.
 This is where we would put "SE" or "IL" for an SE conversation.
 
-The 'start' field is a Unix timestamp for the date and time when the talk started. 
+The `start` field is a Unix timestamp for the date and time when the talk started. 
 If that is not known, then it should be 0.
 
-The 'end' field is a Unix timestamp for the date and time that the talk ended.
+The `end` field is a Unix timestamp for the date and time that the talk ended.
 
-The length of the talk (in seconds) can is simply 'end' minus 'start'.
-If there 'start' was 0, then 'end' will simply represent the length of the talk.
+The length of the talk (in seconds) can is simply `end` minus `start`.
+If there `start` was 0, then `end` will simply represent the length of the talk.
 
-The 'video' field is a URL for video recording of the talk, or null if not available.
+The `video` field is a URL for video recording of the talk, or null if not available.
 
-The 'audio' field is a URL for audio recording of the talk, or null if not available.
+The `audio` field is a URL for audio recording of the talk, or null if not available.
 
-The 'utterances' field is a variable length array of objects, one per utterance.
-the 'time' field of the utterance object is the # of seconds after 'start' that the
+The `utterances` field is a variable length array of objects, one per utterance.
+the `time` field of the utterance object is the # of seconds after `start` that the
 utterance begins.
-The 'speaker' field references the participant (from the participants object) who made the utterance.
-The 'text' field is the text of the actual utterance.
-Special transcript codes/escape-sequences should just be embedded into the 'text' field.
+The `speaker` field references the participant (from the participants object) who made the utterance.
+The `text` field is the text of the actual utterance.
+Special transcript codes/escape-sequences should just be embedded into the `text` field.
 
 
