@@ -5,9 +5,15 @@ Transcripts
 Ideal for me 
 ------------
 
-I make a call to a URL on your site, something like:
+I make an HTTP GET call to a URL on your site, something like:
 
 	https://vidscripts.com/API/V1.0/transcripts/guerrilla_skepticism_on_wikipedia
+
+Put the V1.0 in the path so that later versions of the API can be created without 
+affecting users of the older API.
+
+The "guerrilla_skepticism_on_wikipedia" portion is the unique ID of the transcript I'm asking for.
+
 
 And that call returns a document with mime-type of text/json that looks something like:
 
