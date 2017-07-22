@@ -28,8 +28,8 @@ The return from the call is a document of type "application/json" and would look
 			"sg": {
 				first_name: "Susan",
 				last_name: "Gerbic",
-				image: "http://www.vidscripts.org/scripts/headshots/SusanGerbic.jpg",
-				role: "Speaker"
+				role: "Speaker",
+				image: "http://www.vidscripts.org/scripts/headshots/SusanGerbic.jpg"
 			}
 		},
 		start: 1500759525,
@@ -58,6 +58,7 @@ Each one is keyed by a unique ID for that participant.
 There may be only one if it's a transcript of someone's speech to an audience for example.
 The `role` field of the participant object would be used to indicate that person's role in the conversation.
 This is where we would put "SE" or "IL" for an SE conversation.
+`image` is a URL for a photo or image of the participant, or `null` if not available.
 
 `start` is a Unix timestamp for the date and time when the talk started. 
 If not known, it should be 0.
