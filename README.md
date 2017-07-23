@@ -79,3 +79,61 @@ utterance begins.
 Special transcript codes/escape-sequences should just be embedded into the `text` field.
 
 
+MySQL/MariaDB Schema
+--------------------
+
+	--
+	-- Database: `transcripts`
+	--
+
+	-- --------------------------------------------------------
+
+	--
+	-- Table structure for table `speakers`
+	--
+
+	CREATE TABLE IF NOT EXISTS `speakers` (
+	  `id` int(16) unsigned NOT NULL AUTO_INCREMENT,
+	  `transcript_id` int(16) unsigned NOT NULL COMMENT 'ID of the transcript where this speaker was a participant',
+	  `first_name` char(255) COLLATE utf8_unicode_ci NOT NULL,
+	  `last_name` char(255) COLLATE utf8_unicode_ci NOT NULL,
+	  `role` char(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'The role that this speaker played in the talk',
+	  PRIMARY KEY (`id`),
+	  KEY `first_name` (`first_name`,`last_name`,`role`),
+	  KEY `transcript_id` (`transcript_id`)
+	) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+
+	-- --------------------------------------------------------
+
+	--
+	-- Table structure for table `transcripts`
+	--
+
+	CREATE TABLE IF NOT EXISTS `transcripts` (
+	  `id` int(16) unsigned NOT NULL AUTO_INCREMENT,
+	  `owner` char(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+	  `title` char(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+	  `summary` text COLLATE utf8_unicode_ci NOT NULL,
+	  `video` text COLLATE utf8_unicode_ci NOT NULL,
+	  `length` int(10) unsigned NOT NULL,
+	  `image` text COLLATE utf8_unicode_ci NOT NULL,
+	  PRIMARY KEY (`id`)
+	) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+	-- --------------------------------------------------------
+
+	--
+	-- Table structure for table `utterances`
+	--
+
+	CREATE TABLE IF NOT EXISTS `utterances` (
+	  `id` int(16) unsigned NOT NULL AUTO_INCREMENT,
+	  `transcript_id` int(16) NOT NULL COMMENT 'id of the transcript to which this utterance belongs',
+	  `speaker_id` int(16) NOT NULL COMMENT 'id of the speaker who made this utterance',
+	  `stamp` int(16) unsigned NOT NULL COMMENT '# of seconds into the transcript where this utterances occurs',
+	  `text` text COLLATE utf8_unicode_ci NOT NULL COMMENT 'transcribed text of the utterance',
+	  PRIMARY KEY (`id`),
+	  KEY `transcript_id` (`transcript_id`),
+	  KEY `speaker_id` (`speaker_id`)
+	) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+
